@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+<h1>Product</h1>
+<ul id="product"></ul>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	jQuery.ajax({
+		url: 'http://localhost:3000/list-api',
+		method:'get',
+		success: function(data){
+			var html = '';
+			for (var i = 0; i < data.length; i++) {
+				html += '<li><img src="'+data[i].image+'"></img></li>';
+			}
+			jQuery("#product").append(html);
+		}
+	});
+</script>
+</body>
+</html>
