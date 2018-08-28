@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="top-header">
+			<div class="container">
+				<div class="top-header-content">
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<div class="select-language">
+							<div class="tooltip">English
+								<span class="tooltiptext">Sorry, this website cannot use another language</span></div>
+						</div>
+						<div class="select-currency">
+							<div class="tooltip">USD<i class="fas fa-dollar-sign"></i>
+								<span class="tooltiptext">Sorry, this website cannot use another currency</span></div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4"><div class="social">
+						<a href="#facebook" class="fab fa-facebook-f"></a>
+						<a href="#twitter" class="fab fa-twitter"></a>
+						<a href="#rss" class="fas fa-rss"></a>
+						<a href="#youtube" class="fab fa-youtube"></a>
+						<a href="#google" class="fab fa-google-plus-g"></a>
+					</div></div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<a href="#Account" class="myaccount">
+							<i class="fas fa-user"></i>
+							<span>My Account</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-header">
+			<div class="container">
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<a href="#logo" class="logo"><img src="images/logo.png"></a>
+				</div>
+				<div class="col-lg-6 col-md-5 col-sm-5">
+					<div class="search-box">
+						<form action="#" method="GET"> 
+	  						<div class="row">
+	    						<div class="input-group">
+	        						<input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
+	        						<div class="input-group-btn">
+	          							<button class="btn btn-primary" type="submit">
+	            							<span class="glyphicon glyphicon-search"></span>
+	          							</button>
+	        						</div>
+	      						</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-3">
+					<div class="cart-content">
+						<div class="col-lg-5 col-md-5 col-sm-5">
+							<i class="fas fa-shopping-basket"></i>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7" style="text-align: center;">
+							<span style="font-weight: 600">Your Cart</span><br>
+							<span>xx Item</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar">
+ 			<div class="container">
+ 				<div id="menu" class="menu">
+	 					<a href="home.html">Home</a>
+		 				<div class="dropdown">
+		 					<a class="dropdown-toggle" data-toggle="dropdown">
+		 						<p class="dropdown-toggle-text">Products</p>
+		 					</a>
+		 					<div class="dropdown-menu">
+		 						<ul class="col-lg-6 dropdown-1">
+		 							<li><a href="#">Fruit Juices</a></li>
+			 						<li><a href="#">Vegetable Juices</a></li>
+			 						<li><a href="#">Smoothies</a></li>
+			 						<li><a href="#">Protein Shakes</a></li>
+		 						</ul>
+		 						<ul class="col-lg-6 dropdown-1">
+		 							<li><a href="#">Winter Menu</a></li>
+			 						<li><a href="#">Chocolate Juices</a></li>
+			 						<li><a href="#">Mocktails</a></li>
+			 						<li><a style="color: #629e16" href="products.html">See All Our Products<i style="margin-left: 10px;" class="fas fa-chevron-circle-right"></i></a></li>
+			 					</ul>
+			 					<div class="col-lg-12 dropdown-banner"></div>
+		 					</div>
+		 				</div>
+		 				<script type="text/javascript">
+		 					$(document).ready(function(){
+							    $(".dropdown").bind('mouseenter',function(){
+							        $(".dropdown-menu").slideDown();
+							    });
+							    $(".dropdown").bind('mouseleave',function(){
+							        $(".dropdown-menu").hide();
+							    });
+							});
+							
+		 				</script>
+		 				<a href="store">Store Location</a>
+		 				<a href="franchising.html">Franchising</a>
+		 				<a href="catering.html">Catering</a>
+		 				<a href="contact-us.html">Contact Us</a>
+		 				<a href="FAQ.html">FAQ</a>
+		 				<a href="about-us.html">About Us</a>
+	 				
+ 				</div>
+ 			</div>
+ 			<script>
+				window.onscroll = function() {navbarfixed()};
+				var navbar = document.getElementById("navbar");
+				function navbarfixed() {
+					if (window.pageYOffset >= 187) {
+						navbar.classList.add("sticky")
+					} else {
+						navbar.classList.remove("sticky");
+					}
+				}
+			</script>
+		</div>
+
+
+	</header>
+
+
+
+	<div style="height:1000px;width: 100%;background-color: red;float: left;"></div>
+
+
+
+	
+	<footer>
+		<div class="top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="top-footer-content">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="col-lg-2 col-md-2 col-sm-2 ">
+								<i style="font-size: 50px;color: white;" class="far fa-envelope"></i>
+							</div>
+							<div class="col-lg-10 col-md-10 col-sm-10">
+								<span style="float: left;margin: 15px 0;color: white;letter-spacing: 1px;">Stay connectd with our email updates</span>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="mail-box">
+								<form action="#" method="GET"> 
+			  						<div class="row">
+			    						<div class="input-group">
+			        						<input type="text" class="form-control" placeholder="Enter E-Mail address" id="txtSearch"/>
+			        						<div class="input-group-btn">
+			          							<button class="btn btn-primary" type="submit" style="background-color: #ef3e3c;">
+			          								<span style="text-transform: uppercase;">subcribe</span>
+			          							</button>
+			        						</div>
+			      						</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 footer-font">
+						<div class="block-center text-center">
+							<span>Product</span>
+							<ul>
+								<li><a href="#">Delivery</a></li>
+								<li><a href="#">Legal Note</a></li>
+								<li><a href="#">Price Drop</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 middle-border">
+						<div class="middle">
+							<div class="logo">
+								<img style="width: 50%;" src="images/logo.png">
+							</div>
+							<div class="des">
+								<span>"Lorem ipsum is not simply random text. It has Contrary to popular belief. not simply random simply random text. It has Contraref".</span>
+							</div>
+							<div class="social1">
+								<a href="#facebook" class="fab fa-facebook-f"></a>
+								<a href="#twitter" class="fab fa-twitter"></a>
+								<a href="#rss" class="fas fa-rss"></a>
+								<a href="#youtube" class="fab fa-youtube"></a>
+								<a href="#google" class="fab fa-google-plus-g"></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 footer-font">
+						<div class="block-center">
+							<span>Store Information</span>
+							<p><i class="fas fa-map-marker-alt"></i>Organic Store
+							123, Yourstreet, Yourarea
+							United States</p>
+							<p><i class="fas fa-mobile-alt"></i>123 456 789</p>
+							<p><i class="far fa-envelope"></i>Sales@Yourshop.Com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="copyright text-center">
+							<p href="#">© 2018 - Ecommerce software by Group 4™</p>
+						</div>
+						<div class="payment text-center">
+							<i class="fab fa-cc-discover"></i>
+							<i class="fab fa-cc-mastercard"></i>
+							<i class="fab fa-cc-visa"></i>
+							<i class="fab fa-cc-paypal"></i>
+							<i class="fab fa-cc-amex"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
