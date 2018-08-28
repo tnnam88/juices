@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+<h1>Top Product</h1>
+<ul class="top-product"></ul>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>	
+	jQuery.ajax({
+		url: 'http://localhost:3000/list-product',
+		method:'get',
+		success: function(data){
+			var html = '';
+			for (var i = 0; i < data.length; i++) {
+				if (data[i].top_product == 1) {
+				html += '<a href="#"><img src="'+data[i].image+'" class="img-responsive center-block"></a>';
+			}
+			}
+			jQuery(".top-product").append(html);
+		}
+	});
+</script>
+</body>
+</html>
