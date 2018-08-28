@@ -2,23 +2,309 @@
 <html>
 <head>
 	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Product</h1>
-<ul id="product"></ul>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-	jQuery.ajax({
-		url: 'http://localhost:3000/list-api',
-		method:'get',
-		success: function(data){
-			var html = '';
-			for (var i = 0; i < data.length; i++) {
-				html += '<li><img src="'+data[i].image+'"></img></li>';
-			}
-			jQuery("#product").append(html);
-		}
-	});
-</script>
+	<section>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#myCarousel" data-slide-to="1"></li>
+		    <li data-target="#myCarousel" data-slide-to="2"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+		    <div class="item active">
+		      <img src="images/banner1.jpg" alt="banner1">
+		    </div>
+
+		    <div class="item">
+		      <img src="images/banner2.jpg" alt="banner2">
+		    </div>
+
+		    <div class="item">
+		      <img src="images/banner3.jpg" alt="banner3">
+		    </div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+	</section>
+	<section>
+		<div class="title">
+			 <h2>WHY CHOSE US!</h2>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4">
+					<div>
+					    <div>
+					        <div class="whychose">
+					        	<a href="#"><img src="images/chose1.png" alt=""></a>
+					        </div>
+
+						    <div>
+						        <h4>Quality Fruit & Vet</h4>
+						    </div>
+						    <div>
+						        <p>Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.</p>
+						    </div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div>
+					    <div>
+					        <div class="whychose">
+					        	<a href="#"><img src="images/chose2.png" alt=""></a>
+					        </div>
+
+						    <div>
+						        <h4>Best Services</h4>
+						    </div>
+						    <div>
+						        <p>Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.</p>
+						    </div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div>
+					    <div>
+					        <div class="whychose">
+					        	<a href="#"><img src="images/chose3.png" alt=""></a>
+					        </div>
+
+						    <div>
+						        <h4>Original Recipes</h4>
+						    </div>
+						    <div>
+						        <p>Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.</p>
+						    </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="title">
+			 <h2>CHECK IT OUT!</h2>
+		</div>
+		<div class="banner-wrapper">
+		  <div class="banner">
+		    <p class="text">Hot product</p>
+		    <p class="text">Hot product</p>
+		    <p class="text">Hot product</p>
+		    <p class="text">Hot product</p>
+		    <p class="text">Hot product</p>
+		    <p class="text">Hot product</p>
+		    <p class="text">Hot product</p>
+		 	</div>
+		</div>
+	</section>
+
+	<section>
+			<!-- Item slider-->
+		<div class="container-fluid">
+		  <div class="row">
+		    <div class="col-xs-12 col-sm-12 col-md-12">
+		      <div class="carousel carousel-showmanymoveone slide" id="itemslider">
+		        <div class="carousel-inner">
+		          <div class="item active">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="#"><img src="images/top_pro1.png" class="img-responsive center-block"></a>
+		            </div>
+		          </div>
+		 
+		          <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="#"><img src="images/top_pro2.png" class="img-responsive center-block"></a>
+		            </div>
+		          </div>
+		 
+		           <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="#"><img src="images/top_pro3.png" class="img-responsive center-block"></a>
+		            </div>
+		          </div>
+		 
+		           <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="#"><img src="images/top_pro4.png" class="img-responsive center-block"></a>
+		            </div>
+		          </div>
+		 
+		          <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="#"><img src="images/top_pro5.png" class="img-responsive center-block"></a>
+		            </div>
+		          </div>
+		        </div>
+		<!-- left,right control -->
+		       	<div id="slider-control">
+		        	<a class="left carousel-control" href="#itemslider" data-slide="prev"></a>
+		        	<a class="right carousel-control" href="#itemslider" data-slide="next"></a>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+<!-- Item slider end-->
+	</section>
+
+
+
+	<section>
+		<div class="title">
+			 <h2>MEET FRESH INGREDIENTS!</h2>
+		</div>
+		<div class="link-boxes">
+		  <a  data-toggle="collapse" data-target="#demo" href="#" class="box1" style="background-image:url('images/banana.jpg')">
+		    <div class="box-label"></div>
+		    <div id="demo" class="collapse">
+Lorem ipsum dolor text....
+</div>
+		  </a>
+		    <a href="#" class="box2" style="background-image:url('images/mango.jpg')">
+		    <div class="box-label"></div>
+		  </a>
+		  <a href="#" class="box3" style="background-image:url('images/apple.jpg')">
+		    <div class="box-label"></div>
+		  </a>
+		  <a href="#" class="box4" style="background-image:url('images/wheetgrass.jpg')">
+		    <div class="box-label"></div>
+		  </a>
+		  <a href="#" class="box5" style="background-image:url('images/orange.jpg')">
+		    <div class="box-label"></div>
+		  </a>
+		</div>
+	</section>
+	<section>
+		<div class="galery">
+			<div class="title">
+			    <h2>GALERY</h2>
+			</div>
+			<div class="gallery">
+			    <div class="gallery__item zoom-galery">
+			      <figure><img class="img_galery " src="images/galery1.jpg" alt="galery"></figure>
+			    </div>
+			    <div class="gallery__item zoom-galery">
+			      <figure><img class="img_galery"src="images/galery2.jpg" alt="galery"></figure>
+			    </div>
+			    <div class="gallery__item zoom-galery">
+			      <figure><img class="img_galery" src="images/galery3.jpg" alt="galery"></figure>
+			    </div>
+			    <div class="gallery__item zoom-galery">
+			      <figure><img  class="img_galery"src="images/galery4.jpg" alt="galery"></figure>
+				</div>
+			    <div class="gallery__item zoom-galery">
+			      <figure><img class="img_galery" src="images/galery5.jpg" alt="galery""></figure>
+			     </div>
+			  	<div class="gallery__item zoom-galery">
+			      <figure><img class="img_galery" src="images/galery6.jpg" alt="galery"></figure>
+			    </div>
+			    <div class="gallery__item zoom-galery">
+			      <figure><img  class="img_galery"src="images/galery7.png" alt="galery"></figure>
+			    </div>
+			    <div class="gallery__item zoom-galery">
+			     	<figure><img  class="img_galery" src="images/galery8.jpg" alt="galery"></figure>
+			     </div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+	<section >
+		<div class="galery">
+			<div class="title">
+			 <h2>CHECK OUR BLOG</h2>
+			</div>
+			<article>
+			    <img  class="img_galery"src="images/blog1.jpg" alt="blog">
+			    <h5 class="caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit perferendis </h5>
+			   <p class="paragraph">Quaerat porro corrupti, voluptatibus assumenda delectus possimus atque illo, ullam eaque minima vitae quis illum quod quas!</p>
+			    <a href="#">
+			   <span class="button">
+			       Load more
+			   </span>
+			 	</a>
+			</article>
+			<article>
+			    <img  class="img_galery" src="images/blog2.jpg" alt="girls">
+			    <h5 class="caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit perferendis </h5>
+			   <p class="paragraph">Quaerat porro corrupti, voluptatibus assumenda delectus possimus atque illo, ullam eaque minima vitae quis illum quod quas!</p>
+			   <a href="#">
+			   <span class="button">
+			       Load more
+			   </span>
+			 	</a>
+			</article>
+			<article>
+			    <img class="img_galery" src="images/blog3.jpg" alt="bas">
+			    <h5 class="caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit perferendis</h5>
+			   <p class="paragraph">Quaerat porro corrupti, voluptatibus assumenda delectus possimus atque illo, ullam eaque minima vitae quis illum quod quas!</p>
+			 	<a href="#">
+			   <span class="button">
+			       Load more
+			   </span>
+			 	</a>
+			</article>
+		</div>
+	</section> 
 </body>
+<script>
+//top-product show//
+	$(document).ready(function(){
+ 
+		$('#itemslider').carousel({ interval: 3000 });
+		 
+		$('.carousel-showmanymoveone .item').each(function(){
+		var itemToClone = $(this);
+		 
+			for (var i=1;i<6;i++) {
+			itemToClone = itemToClone.next();
+			 
+			if (!itemToClone.length) {
+			itemToClone = $(this).siblings(':first');
+			}
+			 
+			itemToClone.children(':first-child').clone()
+			.addClass("cloneditem-"+(i))
+			.appendTo($(this));
+			}
+		});
+	});
+
+//infinite top-product banner //
+
+	 $(document).ready(function(){
+		  initBanner();
+		});
+
+		function initBanner(){
+		  var bannerTwo = $('.banner').clone();
+		  bannerTwo.appendTo('.banner-wrapper');
+		  bannerTwo.addClass('banner-clone');
+		  bannerTwo.css('animation', 'scroll-start 10s linear 1');
+		  setTimeout(function(){
+		        bannerTwo.css('animation','scroll 20s linear infinite');
+		   }, 10000);
+		} 
+
+</script>
 </html>
