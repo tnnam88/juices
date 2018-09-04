@@ -1,0 +1,38 @@
+var data = [
+	{
+		"id": "11",
+		"cat_id" : "1",
+		"name": "Orange Juice",
+		"price": "60000",
+		"image": "images/fruit-juices/fj1.jpg",
+		"description": "Juice is a drink made from the extraction or pressing of the natural liquid contained in fruit and vegetables. It can also refer to liquids that are flavored with concentrate or other biological food sources, such as meat or seafood, such as clam juice. Juice is commonly consumed as a beverage or used as an ingredient or flavoring in foods or other beverages, as for smoothies. Juice emerged as a popular beverage choice after the development of pasteurization methods enabled its preservation without using fermentation (which is used in wine production)",
+		"top_product": "1",
+	},
+	{
+		"id": "12",
+		"cat_id" : "1",
+		"name": "Lemon Juice",
+		"price": "70000",
+		"image": "images/fruit-juices/fj2.jpg",
+		"description": "Juice is extracted from the fruit and the water content is reduced (by evaporating off the water naturally present) in the country of origin. The concentrated juice is usually frozen and shipped to the country of use for packing. Fruit juice packers then reconstitute the juice by adding back the water.",
+		"top_product": "0",
+	},
+	{
+		"id": "13",
+		"cat_id" : "2",
+		"name": "Carrot Juice",
+		"price": "50000",
+		"image": "images/vegetable-juices/vj1.jpg",
+		"description": "Juice is a drink made from the extraction or pressing of the natural liquid contained in fruit and vegetables. It can also refer to liquids that are flavored with concentrate or other biological food sources, such as meat or seafood, such as clam juice. Juice is commonly consumed as a beverage or used as an ingredient or flavoring in foods or other beverages, as for smoothies. Juice emerged as a popular beverage choice after the development of pasteurization methods enabled its preservation without using fermentation (which is used in wine production)",
+		"top_product": "0",
+	},
+	{
+		"id": "14",
+		"cat_id" : "2",
+		"name": "Broccoli Juice",
+		"price": "60000",
+		"image": "images/vegetable-juices/vj2.jpg",
+		"description": "Juice is extracted from the fruit and the water content is reduced (by evaporating off the water naturally present) in the country of origin. The concentrated juice is usually frozen and shipped to the country of use for packing. Fruit juice packers then reconstitute the juice by adding back the water.",
+		"top_product": "1",
+	},
+]

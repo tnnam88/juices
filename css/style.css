@@ -36,14 +36,14 @@ a:hover{
 .select-language span{
 	padding-right: 5px;
 }
-.tooltip {
+.tooltip-header {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
     opacity: 1; cursor: pointer;
 }
 
-.tooltip .tooltiptext {
+.tooltip-header .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #ef3e3c;
@@ -60,10 +60,10 @@ a:hover{
     margin-left: -60px;
 
 }
-.tooltip:hover{
+.tooltip-header:hover{
 	color: #ef3e3c;
 }
-.tooltip:hover .tooltiptext {
+.tooltip-header:hover .tooltiptext {
     visibility: visible;
 }
 .select-currency{
@@ -128,15 +128,14 @@ a:hover{
 #navbar {
   background-color: #629e16;
   float: left;width: 100%;
-  z-index: 3;
-  min-height: 40px;
+  z-index: 1000;
 }
 .dropdown-toggle-text{
 	margin-bottom: 0;
 }
 p.dropdown-toggle-text:hover{
 	color: #ef3e3c;
-	cursor: default;
+	cursor: pointer;
 }
 .dropdown{
 	float: left;
@@ -152,7 +151,6 @@ p.dropdown-toggle-text:hover{
 	text-decoration: none;
 	color: white;
 }
-
 .dropdown-1 a{
  	color: #000;
  }
@@ -175,6 +173,7 @@ p.dropdown-toggle-text:hover{
 }
 .menu > a:hover{
 	color: #ef3e3c;
+	text-decoration: none;
 }
 .top-footer{
 	float: left;width: 100%;
@@ -196,9 +195,6 @@ p.dropdown-toggle-text:hover{
 .main-footer > .container{
 	padding: 50px 0 30px;
 	border-bottom: 1px #0000005c solid;
-}
-.footer-font{
-	float: left;
 }
 .footer-font span{
 	font-size: 16px;
@@ -251,10 +247,6 @@ p.dropdown-toggle-text:hover{
 .block-center i{
 	padding-right: 10px;
 }
-.bottom-footer{
-	float: left;
-	width: 100%;
-}
 .copyright{
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -279,6 +271,148 @@ p.dropdown-toggle-text:hover{
     background-size: cover;
     background-attachment: fixed;
 }
+
+
+.intro {
+  background:#629e16ab;
+  padding: 100px 0;
+  float: left;width: 100%;
+}
+.timeline{
+	float: left;width: 100%;
+}
+.timeline ul {
+  background: #fff;
+  padding: 50px 0;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #629e16;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #ef3e3ce0;
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F45B69;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #F45B69;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+  }
+}
 .section-aboutus-2{
 	float: left;width: 100%;
 	margin: 90px 0;
@@ -300,10 +434,10 @@ p.dropdown-toggle-text:hover{
 
 .juice-party-banner{
 	float: left;width: 100%;
-	background-image: url(../images/juice-party-banner.jpg);
+	background-image: url(../images/catering-banner.jpg);
 	min-height: 370px;
 	background-position: center;
-	margin: 50px 0;
+	margin-bottom: 100px;
 }
 .section-catering-1{
 	float: left;width: 100%;
@@ -322,14 +456,13 @@ p.dropdown-toggle-text:hover{
 .slide-wrapper-2 {
   width: 2912px;
   -webkit-animation: slide 18s ease infinite;
-  animation-delay: 0.5s;
 }
 
-.slide {
+.slide-catering {
   float: left;
   width: 728px;
 }
-.slide img{
+.slide-catering img{
 	width: 350px;width: 300px;
 }
 
@@ -371,6 +504,16 @@ p.dropdown-toggle-text:hover{
 }
 .fresh-juice-kit,.bottled-juice-kit{
 	float: left;width: 100%;
+}
+.catering-some-ex{
+	float: left;width: 100%;
+	padding-bottom: 50px;
+	border-bottom: 1px solid;
+}
+.catering-some-ex img{
+	margin: 20px 40px;
+	width: 500px;
+	height: 300px;
 }
 .button-catering{
 	padding: 10px 20px;
@@ -443,9 +586,37 @@ p.dropdown-toggle-text:hover{
 .franchising-heading span{
 	font-size: 16px;
 }
+.franchising-main{
+	margin-bottom: 50px;
+}
 .franchising-main p{
 	margin: 20px 0;
 }
 .franchising-main i{
 	font-size: 14px;
+}
+
+/*---------------------contact-us----------------------*/
+
+.contact-us-banner{
+	float: left;width: 100%;
+	background-image: url(../images/contact-us-banner.jpg);
+	min-height: 300px;background-position: center;
+}
+.contact-us-main{
+	float: left;width: 100%;
+}
+.contact-us-header{
+	float: left;width: 100%;
+	margin: 60px 0;
+}
+.contact-us-header h1{
+	margin: 0;
+}
+#success_message{ display: none;}
+.well{
+	margin-top: 50px;
+}
+.contact-us-information{
+	margin-bottom: 50px;
 }
