@@ -189,7 +189,6 @@ p.dropdown-toggle-text:hover{
 }
 .main-footer{
 	float: left;width: 100%;
-	font-family: "roboto slab";
 
 }
 .main-footer > .container{
@@ -275,12 +274,15 @@ p.dropdown-toggle-text:hover{
 
 .intro {
   background:#629e16ab;
-  padding: 100px 0;
+  padding: 50px 0;
   float: left;width: 100%;
 }
 .timeline{
 	float: left;width: 100%;
+	color: rgba(255,255,255,0.85);
+	font-size: 18px;
 }
+
 .timeline ul {
   background: #fff;
   padding: 50px 0;
@@ -343,11 +345,30 @@ p.dropdown-toggle-text:hover{
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent #F45B69;
 }
+.timeline ul li:nth-child(even) p {
+  margin-left: -100px;
+}
 
-time {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
+.timeline ul li:nth-child(even) p::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
+}
+
+.timeline ul li:nth-child(odd) p {
+  margin-left: 45px;
+}
+
+.timeline ul li:nth-child(odd) p::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F45B69;
+}
+.timeline p {
+  display: block;color: black;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 500;
   margin-bottom: 8px;
 }
 
@@ -368,6 +389,11 @@ time {
   opacity: 0;
   transition: all .5s ease-in-out;
 }
+.timeline ul li p {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
 
 .timeline ul li:nth-child(odd) div {
   transform: translate3d(200px, 0, 0);
@@ -376,8 +402,20 @@ time {
 .timeline ul li:nth-child(even) div {
   transform: translate3d(-200px, 0, 0);
 }
+.timeline ul li:nth-child(even) p {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(odd) p {
+  transform: translate3d(-200px, 0, 0);
+}
 
 .timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+.timeline ul li.in-view p {
   transform: none;
   visibility: visible;
   opacity: 1;
@@ -456,8 +494,18 @@ time {
 .slide-wrapper-2 {
   width: 2912px;
   -webkit-animation: slide 18s ease infinite;
+  -webkit-animation-delay: 1.5s;
 }
-
+.slide-wrapper-3 {
+  width: 2912px;
+  -webkit-animation: slide 18s ease infinite;
+  -webkit-animation-delay: 3s;
+}
+.slide-wrapper-4 {
+  width: 2912px;
+  -webkit-animation: slide 18s ease infinite;
+  -webkit-animation-delay: 4.5s;
+}
 .slide-catering {
   float: left;
   width: 728px;
@@ -597,7 +645,9 @@ time {
 }
 
 /*---------------------contact-us----------------------*/
-
+legend{
+	padding-bottom: 20px;
+}
 .contact-us-banner{
 	float: left;width: 100%;
 	background-image: url(../images/contact-us-banner.jpg);
@@ -617,6 +667,41 @@ time {
 .well{
 	margin-top: 50px;
 }
-.contact-us-information{
-	margin-bottom: 50px;
+
+/*-------------------------Shopping-cart-----------------*/
+
+.cart-section{
+	float: left;width: 100%;
+}
+.cart-text{
+	float: left;width: 100%;
+	padding: 30px 0;
+	border-bottom: 1px #000000b0 solid;
+}
+.cart-check-text{
+	float: left;width: 100%;
+	margin: 20px 0;
+	letter-spacing: 0.5px;
+}
+.table{
+	margin: 0 auto;
+    width: 1080px;
+}
+.table>tbody>tr{
+	height: 100px;
+}
+.table>thead>tr>th{
+	text-align: center;
+}
+.table>tbody>tr>td{
+	border: 0.5px #00000059 solid;
+}
+.cart-images-table{
+	width: 100px;
+}
+.cart-images-table img{
+	width: 100px;
+}
+.product-name{
+	padding: 10px 0;
 }
